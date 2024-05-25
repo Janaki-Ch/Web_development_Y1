@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <style>
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        margin: 50px 0;
+        width: 100%;
+      }
+      .container h1 {
+        text-align: center;
+        color: rgb(20, 1, 1);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 40px;
+        line-height: 80px;
+        margin-bottom: 20px;
+      }
+      .container label {
+        text-align: left;
+        color: #2b2b2b;
+      }
+      .container form input,
+      textarea {
+        width: 100%;
+        padding: 8px 10px;
+        margin-bottom: 15px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid #9b9b9b;
+        color: rgb(49, 49, 49);
+        font-size: 20px;
+        outline: none;
+        resize: none;
+      }
+      .container form button {
+        cursor: pointer;
+        padding: 10px 20px;
+        border: none;
+        background-color: #000000;
+        font-size: 18px;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar content -->
+    <header>
+      <nav>
+        <div class="logo_container">
+          <a href="">Technology</a>
+        </div>
+        <div class="links_container">
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+            <li>
+              <a href="cv.html">CV</a>
+            </li>
+            <li>
+              <a href="blog.html">Blogs</a>
+            </li>
+            <li>
+              <a href="research.html">Research</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- Contact Content -->
+    <main class="container">
+      <h1>Contact</h1>
+      <form id="contactForm">
+        <label>Name</label><br />
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter Your Name"
+        /><br />
+        <label>Email Address</label><br />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Enter Your Email"
+        /><br />
+
+        <label>Message</label><br />
+        <textarea
+          type="text"
+          rows="5"
+          name="msg"
+          id="msg"
+          placeholder="Enter Your Message"
+        ></textarea
+        ><br />
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <!-- Footer Content -->
+    <footer>
+      <div>
+        <h1>Janaki Chaudhary</h1>
+        <p>
+           A beginner web developer and a student of well known and reputed Islington college.
+        </p>
+        <p>+977 9809123899</p>
+        <p>Kathmandu, Nepal</p>
+        <p>&copy; Janaki Chaudhary | All Rights Reserved</p>
+      </div>
+      <div>
+        <h1>Quick Links</h1>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
+      </div>
+      <div>
+        <h1>Contact Me</h1>
+        <input type="text" name="email" placeholder="Enter Your Email" />
+        <textarea
+          type="text"
+          name="msg"
+          placeholder="Enter Your Message"
+        ></textarea>
+        <button class="btn">Submit</button>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const msg = document.getElementById("msg").value;
+      if (!name || !email || !msg) {
+        alert("Please provide all of the info.");
+      } else {
+        alert("Thank you for contacting.");
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,118 @@
+* {
+  font-family: "Nunito", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.logo_container {
+  border: 2px solid rgb(48, 46, 46);
+  padding: 5px;
+}
+
+.logo_container a {
+  font-weight: 600;
+  font-size: 25px;
+  color: black;
+  text-decoration: none;
+}
+
+div ul {
+  display: flex;
+  flex-direction: row;
+}
+
+div ul li {
+  list-style: none;
+  /*  Top Right Bottom Left -> TRBL -> TROUBLE   */
+  margin: 10px 20px;
+}
+
+div ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  transition: color 450ms ease;
+}
+
+div ul li a:hover {
+  color: #8a26cc;
+}
+
+.btn {
+  font-size: 15px;
+  font-weight: semi-bold;
+  width: 150px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  background: #e6e6e6;
+  color: #8a26cc;
+  border-radius: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 150ms ease-in;
+}
+.btn:hover {
+  background: rgb(44, 39, 41);
+  color: white;
+}
+.btn a {
+  color: inherit;
+  text-decoration: none;
+}
+footer {
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+  border-top: 1px solid rgb(39, 39, 39);
+}
+
+footer div {
+  padding: 0 20px;
+}
+footer div h1 {
+  font-size: 30px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+footer div p {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+footer div input,
+textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+  background: transparent;
+  resize: none;
+}
+
+footer div ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

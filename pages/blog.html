@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <title>Blog page</title>
+    <style>
+      .mySlides {
+        display: none;
+      }
+      img {
+        vertical-align: middle;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @-webkit-keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      main p {
+        color: rgb(83, 83, 83);
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 300;
+      }
+
+      .blogs_container {
+        display: flex;
+        flex-direction: column;
+      }
+      .blog {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .blog_img img {
+        height: 300px;
+        width: 300px;
+        object-fit: contain;
+        margin-right: 50px;
+      }
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: center;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #8a26cc;
+        color: #fff;
+      }
+
+      td::before {
+        content: "→";
+        padding-right: 5px;
+      }
+
+      td {
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo_container">
+          <a href="">Technology</a>
+        </div>
+        <div class="links_container">
+          <ul>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a href="cv.html">CV</a>
+            </li>
+            <li>
+              <a href="blog.html">Blogs</a>
+            </li>
+            <li>
+              <a href="research.html">Research</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div
+        class="slideshow-container"
+        style="margin-top: 50px; margin-bottom: 30px"
+      >
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="../images/image12.jpg" style="width: 100%" />
+          <div class="text">Technology in daily life</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="../images/image11.jpg" style="width: 100%" />
+          <div class="text">Use of robotics in industry</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="../images/image10.jpg" style="width: 100%" />
+          <div class="text"> Technology in communication</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <div class="content_container">
+        <h1 style="font-size: 50px">Impacts of technology</h1>
+        <p style="margin-top: 5px">
+          Over the previous decades, technology has become the basic need of our lives. We all are surrounded by gadgets and tech-appliances.
+        Technology has a great impacts on our life. It is both impacting us positively as well as negatively. From telephone to smartphone, from blackboard to projector, from shop queue to online malls, technology has raised our daily life to next level convienency.
+        </p>
+      </div>
+      <div class="blogs_container">
+        <h1 style="font-size: 35px; margin-top: 20px">Blogs</h1>
+        <div class="blog">
+          <div class="blog_img">
+            <img src="../images/image1.jpg" alt="" />
+          </div>
+          <div class="blog_content">
+            <h2 style="font-size: 30px; font-weight: 600">Technology in daily life.</h2>
+            <h4
+              style="
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                color: #7c7c7c;
+              "
+            >
+              2021/05/22 | Janaki Chaudhary
+            </h4>
+            <p> Technology plays a vital role in our daily life fulfilling our desired needs such as we can take common examples smartphones, electric iron, computers, laptops, TV, cooler , heater and many other things, Technology has made our life more easy  but to some extent it has also created some problems such as too much use of the mobile devices leading to physical issues, similarly over use of technology directly affects childrens and teenagers. 
+            </p>
+          </div>
+        </div>
+        <div class="blog">
+          <div class="blog_img">
+            <img src="../images/image2.jpg" alt="" />
+          </div>
+          <div class="blog_content">
+            <h2 style="font-size: 30px; font-weight: 600">Technology for industries</h2>
+            <h4
+              style="
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                color: #7c7c7c;
+              "
+            >
+              2021/05/22 | Janaki Chaudhary
+            </h4>
+            <p>
+              Technology has been a key for the development of industries.Such as, we can see the use of robots instead of the workers has made the performace time saving and more efficient. Not only that use of huge machineries in large scale factories has helped to produce produtcs in heavy quantity. But use of these machineries , robots and new means are very costly as well very complex to operate. These machines needs lots of materials to work as well. 
+            </p>
+          </div>
+        </div>
+        <div class="blog">
+          <div class="blog_img">
+            <img src="../images/image10.jpg" alt="" />
+          </div>
+          <div class="blog_content">
+            <h2 style="font-size: 30px; font-weight: 600">Technology in communication</h2>
+            <h4
+              style="
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                color: #7c7c7c;
+              "
+            >
+              2021/05/22 | Janaki Chaudhary
+            </h4>
+            <p>
+              we are using different mediums for communication, such as smartphones, pcs, whatsapp, facebook, twitter, instagram etc which are all the different forms of technology. The most commonly used technology for communication is TeleVision as well for todays date its internet. Technology has uplifted our communication to a very high level . Also, we can get any information, communicate with anyone in few seconds. 
+            </p>
+          </div>
+        </div>
+        <div class="blog">
+          <div class="blog_img">
+            <img src="../images/image3.jpg" alt="" />
+          </div>
+          <div class="blog_content">
+            <h2 style="font-size: 30px; font-weight: 600">Technology in E-sports</h2>
+            <h4
+              style="
+                font-size: 14px;
+                font-weight: 400;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                color: #7c7c7c;
+              "
+            >
+              2021/05/22 | Janaki Chaudhary
+            </h4>
+            <p>
+              In todays date, due to the pandemic situation, E-sports has become one of the favourite sports for all people. Online games like GTA, COD, PUBG , FreeFire has become almost every e-sport lover favourite game. E-sports has provided a huge platform for many people to play, learn and ear money as well. But some people taking e-sports more seriously has suffered from mental illness, depression, anger/ pressure problems etc.
+            </p>
+          </div>
+        </div>
+        
+
+        <!-- Comparision Positive vs Negative -->
+        <table style="width: 100%; margin-top: 30px">
+          <h1 style="font-size: 35px; margin-top: 20px">Comparision</h1>
+          <tr>
+            <th style="font-size: 25px; font-weight: 600">Positive Aspect</th>
+            <th style="font-size: 25px; font-weight: 600">Negative Aspect</th>
+          </tr>
+          <tr>
+            <td>Use of robots and well developed machineries in industries.</td>
+            <td>All the robots and machineries are too much expensive and are complex to operate.</td>
+          </tr>
+          <tr>
+            <td>we can easily communicate with any one in any part of the world within few seconds.</td>
+            <td>Good internet and gadgets are not affordable by everyone.</td>
+          </tr>
+          <tr>
+            <td>It has made our daily life more convinent with the use of technologies like smartphone, online shopping, online study etc.</td>
+            <td>Due to the excessive use of gadgets and appliances , it is our affecting mental and physical health, especially childrens and teenagers.</td>
+          </tr>
+          <tr>
+            <td>  Technology has developed our transpotation with production of lots of vehicles, planes, jets etc.</td>
+            <td> Almost, 80% of people use their own personal vehicle for travelling,so there is excessive use of non renewable natural resources like petrol and fuel which is leading to its scarcity. </td>
+          </tr>
+          <tr>
+            <td>In education sector, technology is helping childrens with quality education. Children are using youtube, google classrooms, online jounals to read.</td>
+            <td>Similarly, instead of studying, some childrens are being addict to the youtube, tiktok destroying their career and future.</td>
+          </tr>
+          <tr>
+            <td>Online games i.e., E-sports is developing massively in todays date. People are making lots of money playing games like GTA, PUBG, COD etc.</td>
+            <td>These online games had affected alots of peoples physical health like eye problems, ear problems etc. Also, it creates an agressive behaviour in the player slowly or gradually that is not good for mental health.</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Conclusion -->
+      <div style="margin-top: 50px">
+        <h1 style="font-size: 35px; margin-top: 20px">Conclusion</h1>
+        <p style="margin-top: 20px">
+          As a whole, technology is both good and bad for us. But to some extent, it is more beneficial. Since. technology has made me available to study this IT (Netwroking) so I am really thankful to it. Also, we all know that, if we use some thing in a proper way, then it will be  surely beneficial for us. So, in todays generation, technology is all like our basic need and we cannot neglet it. If we use it properly, then we will not be harmed for sure.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div>
+        <h1>Janaki Chaudhary</h1>
+        <p>
+           A beginner web developer and a student of well known and reputed Islington college.
+        </p>
+        <p>+977 9809123899</p>
+        <p>Kathmandu, Nepal</p>
+        <p>&copy; Janaki Chaudhary | All Rights Reserved</p>
+      </div>
+      <div>
+        <h1>Quick Links</h1>
+        <ul>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
+      </div>
+      <div>
+        <h1>Contact Me</h1>
+        <input type="text" name="email" placeholder="Enter Your Email" />
+        <textarea
+          type="text"
+          name="msg"
+          placeholder="Enter Your Message"
+        ></textarea>
+        <button class="btn">Submit</button>
+      </div>
+    </footer>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+</html>

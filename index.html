@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <title>Homepage</title>
+  <style>
+    /* Hero Section */
+    .image_container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .image_container img {
+      margin: 20px 0;
+      max-width: 100%;
+      max-height: 100%;
+      height: 550px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .image_container p {
+      max-width: 100%;
+      margin: auto;
+      font-size: 17px;
+      font-weight: 300;
+      text-align: justify;
+      color: rgb(68, 64, 64);
+      line-height: 25px;
+    }
+
+    /* Items Container */
+    .item_container {
+      margin: 50px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+    }
+
+    /* Item */
+    .item h1 {
+      font-size: 32px;
+      font-weight: 500;
+    }
+
+    .item p {
+      color: rgb(68, 64, 64);
+      font-weight: 300;
+      padding: 20px 0;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header>
+    <nav>
+      <div class="logo_container">
+        <a href="">Technology</a>
+      </div>
+      <div class="links_container">
+        <ul>
+          <li>
+            <a href="">Home</a>
+          </li>
+          <li>
+            <a href="pages/contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="pages/cv.html">CV</a>
+          </li>
+          <li>
+            <a href="pages/blog.html">Blogs</a>
+          </li>
+          <li>
+            <a href="pages/research.html">Research</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="image_container">
+      <br>
+      <br>
+      <div id="MyClockDisplay" class="clock" onload="showTime()">
+     </div>
+      <script>
+  
+     function showTime(){
+    var date = new Date();
+    var d = date.getDate();
+    var d1 = date.getDay();
+    var h = date.getHours(); // 0 - 12
+    var m = date.getMinutes(); // 0 - 59
+    var s = date.getSeconds(); // 0 - 59
+    var session = "PM";
+    
+    if(h == 02){
+        h = 12;
+    }
+    
+    
+    if(h > 12){
+        session = "PM";
+    }
+    if(h < 12) {
+    session = "AM"
+    }
+    
+    h = (h < 10) ? "0" + h : h;
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = d + "/"+  d1+ "  " +  "Time:" + "  " + h + ":" + m + ":" + s + " " + session;
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    }
+showTime();
+</script>
+<style>
+  
+     body {}
+
+.clock {
+    position: absolute;
+    top: 10%;
+    left: 75%;
+    transform: translateX(-50%) translateY(-50%);
+    color: black;
+    font-size: 15px;
+    letter-spacing: 7px;
+
+}
+.clock:hover {
+     transform: translateY(-20px);
+     transition: 0.5s;
+     font-size: 30px;
+
+}
+</style>
+
+
+      <img src="images/hero.jpg" alt="" />
+      <p>
+        Technology can be simply defined as the appplication of scientific knowledge to the practical aims / needs of human life.Simply, it caa be defined as the the branch of the knowledge that deals with the creation and use of technical means and their interrelation with life ,society and enviroment. It is the process of modernization. From day-to-day life to every sector like industries, transportation, communication, education etc, technology has made everything convienent and developed. From early eras to todays date, from telephone to smartphone, from cart to electrical car, from workers to robot, technology played a vital role for development.
+      </p>
+    </div>
+  </main>
+  <div class="item_container">
+    <div class="item">
+      <h1>CV</h1>
+      <p>
+        CV (Curriculum Vitae) is a simple overview/short description which outlines our personal characteristics, working experiences and academic qualifications & abilities that we have. The more effort we put on tailorig our cv to the applied job, the more likely to get an interview for that job.
+      </p>
+      <button class="btn">
+        <a href="pages/cv.html">Go To CV</a>
+      </button>
+    </div>
+    <div class="item">
+      <h1>Blog</h1>
+      <p> Blog is a website like a journal.People writing blogs are Bloggers. Blog contains differenr cOntents in the form of post which are kept in chronological order i.e. the latest one will be in the top whereas the old one kept below. Blog having multiple bloggers are called as community/group blogs.
+      </p>
+      <button class="btn">
+        <a href="pages/blog.html">Go To Blog</a>
+      </button>
+    </div>
+    <div class="item">
+      <h1>Research</h1>
+      <p>In context of website, research page cotains all the reserches that we have made. Simply, it contains our original research as well as the reference research to which it is compared. There will altogether 5 researches in my website.  
+      </p>
+      <button class="btn">
+        <a href="pages/research.html">
+          Go To Research
+        </a>
+      </button>
+    </div>
+    <div class="item">
+      <h1>Contact Me</h1>
+      <p>
+        In my contact me webpage, I have provided all the spaces where the users can apply their contact for further process. At first, they have to provide their name, email adress and lastly their feedback/ messages as per their desire. 
+      </p>
+      <button class="btn">
+        <a href="pages/contact.html">Go To Contact Me</a>
+      </button>
+    </div>
+  </div>
+  </div>
+  <footer>
+    <div>
+      <h1>Janaki Chaudhary</h1>
+      <p>
+        A beginner web developer and a student of well known and reputed Islington college.
+        
+      </p>
+      <p>+977 9809123899</p>
+      <p>Kathmandu, Nepal</p>
+      <p>&copy; Janaki Chaudhary | All Rights Reserved</p>
+    </div>
+    <div>
+      <h1>Quick Links</h1>
+      <ul>
+        <li><a href="pages/blog.html">Blog</a></li>
+        <li><a href="pages/cv.html">CV</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+        <li><a href="pages/research.html">Research</a></li>
+      </ul>
+    </div>
+    <div>
+      <h1>Contact Me</h1>
+      <input type="text" name="email" placeholder="Enter Your Email">
+      <textarea type="text" name="msg" placeholder="Enter Your Message"></textarea>
+      <button class="btn">Submit</button>
+    </div>
+  </footer>
+</body>
+
+</html>
